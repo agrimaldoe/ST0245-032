@@ -52,7 +52,7 @@ class Date():
         """fecha en formato MM/DD/AAAA"""
         self.month=date[0:2]
         self.day=date[3:5]
-        self.year=date[6,10]
+        self.year=date[6:10]
     def month(self):
         return self.month
     def day(self):
