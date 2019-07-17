@@ -9,19 +9,19 @@ import math
 class Counter():
     """counter."""
     def __init__(self, ID):
-        self.ID=Id
+        self.ID=ID
         self.count=0
     def increase(self):
-         self.count=count+1
+         self.count= self.count+1
 
     def increments(self):
          return self.count
 
     def toString(self):
-        print("Id:",self.Id,"_contador:",self.count)
+        print("Id:",self.ID,"_contador:",self.count)
 
 class Punto2D():
-    """Representacion de punto en 2 dimensiones"""
+    """Representación de punto en 2 dimensiones"""
 
     def __init__(self, x, y):
         self.x = x
@@ -34,7 +34,7 @@ class Punto2D():
         return self.y 
 
     def radio_polar(self):
-        return math.sqrt(x**2+y**2)
+        return math.sqrt(self.x**2+self.y**2)
 
     def angulo_polar(self):
          return math.atan(self.y/self.x)
@@ -66,12 +66,12 @@ class Date():
         if (self.year*10000+self.month*100+self.day)>(other.year*10000+other.month*100+self.day):
             print ("El",other.toString(),"es antes del",self.toString())
         elif (self.year*10000+self.month*100+self.day)<(other.year*10000+other.month*100+self.day):
-            print ("El",other.toString(),"es despues del",self.toString())
+            print ("El",other.toString(),"es después del",self.toString())
         else:
             print ("El",other.toString(),"es igual al",self.toString())
 
 
-# In[ ]:
+
 
 
 
