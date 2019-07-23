@@ -4,3 +4,10 @@ class Taller02:
       Taller02.mcd(y,x%y)
     else:
       return y
+    def comb(counter, lista, param):
+      if param != 0 and counter != len(lista):
+        return Taller02.comb(counter + 1, lista, param) or Taller02.comb(counter +1, lista, param - lista[counter])
+      elif param == 0:
+        return True
+      else:
+        return False
