@@ -14,4 +14,4 @@ class Taller02:
   def comb2(pre,cadena):
     if len(cadena)!=0:
       Taller02.comb2(pre,cadena[1:len(cadena)])
-      Teller02.comb2(pre+cadena[0:1],cadena[1:len(cadena)])
+      Taller02.comb2(pre+cadena[0:1],cadena[1:len(cadena)])
