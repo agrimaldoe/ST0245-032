@@ -1,7 +1,7 @@
 class Taller02:
   def mcd(x,y):
     if x%y!=0:
-      Taller02.mcd(y,x%y)
+      return Taller02.mcd(y,x%y)
     else:
       return y
   def comb(counter, lista, param):
@@ -15,3 +15,5 @@ class Taller02:
     if len(cadena)!=0:
       Taller02.comb2(pre,cadena[1:len(cadena)])
       Taller02.comb2(pre+cadena[0:1],cadena[1:len(cadena)])
+    else:
+      print(pre)
