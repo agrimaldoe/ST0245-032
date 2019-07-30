@@ -3,6 +3,7 @@ class Taller03:
   def hanoi(n, fromm, to, aux):
     if(n==1):
       print("Move disk 1 from", fromm, "to", to)
+      return
     else:
       Taller03.hanoi(n-1, fromm, aux, to)
       print("Move disk", n, "from", fromm, "to", to)
