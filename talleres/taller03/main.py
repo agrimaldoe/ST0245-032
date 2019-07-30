@@ -1,4 +1,4 @@
-import numpy as np
+
 class Taller03:
   def hanoi(n, fromm, to, aux):
     if(n==1):
