@@ -13,7 +13,7 @@ class Taller03:
       print(pre)
     else:
       for i in range (0, len(cadena)):
-        permut(pre + cadena[i], cadena[0:i] + cadena[i+1: len(cadena)])
+        Taller03.permut(pre + cadena[i], cadena[0:i] + cadena[i+1: len(cadena)])
   
     
 
