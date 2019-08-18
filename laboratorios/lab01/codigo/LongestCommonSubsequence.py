@@ -1,11 +1,11 @@
 
-def adn(cadena1, cadena2):
-  '''Función que halla la longitud de la subsecuencia común más larga entre dos cadenas'''
-    if(len(cadena1) == 0 or len(cadena2)==0):
+def adn(chain1, chain2):
+  '''Function which find the longest common subsequence between two chains'''
+    if(len(chain1) == 0 or len(chain2)==0):
         return 0
-    if(cadena1[len(cadena1)-1] == cadena2[len(cadena2)-1]):
-        return adn(cadena1[:len(cadena1)-1], cadena2[:len(cadena2)-1]) + 1
-    return max(adn(cadena1[:len(cadena1)-1], cadena2), adn(cadena1, cadena2[:len(cadena2)-1]))
+    if(chain1[len(chain1)-1] == chain2[len(chain2)-1]):
+        return adn(chain1[:len(chain1)-1], chain2[:len(chain2)-1]) + 1
+    return max(adn(chain1[:len(cadena1)-1], chain2), adn(chain1, chain2[:len(chain2)-1]))
 
 
 
