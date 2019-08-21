@@ -2,8 +2,8 @@
 /**
  * Clase que simula el comportamiento de un ArrayList y algunos de sus métodos.
  * 
- * @author (Alejandro Salazar Arango y Andrés Grimaldos Echavarría) 
- * @version (a version number or a date)
+ * @author Alejandro Salazar Arango y Andrés Grimaldos Echavarría 
+ * @version 1
  */
 public class MyArrayList
 {
@@ -31,12 +31,13 @@ public class MyArrayList
   }
 
   public void addInIndex(int index, int o){
-    if(index >= 0 && index < size){
-      for(int i = 0; i < size; i++){
-        if(i == elements.length && i == size){
-          extend();
-        }
-        if(index == i){
+    if(index >= 0 && index < size){                // O(1)
+      for(int i = 0; i < size; i++){               // O(n)
+        if(i == elements.length && i == size){     // O(1)
+          extend();                                // O(n)+
+        }                                         --------------- 
+                                                  // result:O(n)  La complejidad 
+        if(index == i){                             
           int aux = elements[i];
           elements[i] = o;
           elements[i+1] = aux;
@@ -54,10 +55,10 @@ public class MyArrayList
   }
 
   private void extend(){
-    int [] elements2 = new int[elements.length + DEFAULT_CAPACITY];
-    for(int i = 0; i < size; i++){
-      elements2[i] = elements[i];
+    int [] elements2 = new int[elements.length + DEFAULT_CAPACITY];     //O(1)
+    for(int i = 0; i < size; i++){                                      // O(n) 
+      elements2[i] = elements[i];                                       // O(1)
     }
-    elements = elements2;
-  }
-}
+    elements = elements2;                                               //O(1)+
+  }                                                                     -------                         
+}                                                                       //result O(n) 
