@@ -36,8 +36,8 @@ public class MyArrayList
         if(i == elements.length && i == size){     // O(1)
           extend();                                // O(n)+
         }                                         --------------- 
-                                                  // result:O(n)  La complejidad 
-        if(index == i){                             
+                                                  // result:O(n)  La complejidad al no crecer tan rápido como otras,
+        if(index == i){                           //              permitiría que su uso fuera bueno.
           int aux = elements[i];
           elements[i] = o;
           elements[i+1] = aux;
