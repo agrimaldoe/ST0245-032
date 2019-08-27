@@ -2,7 +2,6 @@ class Node():
     def __init__(self, obj=None, nxt = None):
         self.obj = obj
         self.nxt = nxt
-        self.indx = indx
         
     def __str__(self):
         return "" + self.obj
@@ -10,7 +9,6 @@ class Node():
 class Lsimple():
     def __init__(self):
         self.first_Node = None
-        self.size= 0
         
     def __void(self):
         return self.fisrt_Node == None
