@@ -69,4 +69,4 @@ class Lsimple():
         while node != None:
             print(" => ",node.obj, end ="")
             node = node.nxt
-        print("")
+        print(" ")
