@@ -2,33 +2,37 @@ class Node():
     def __init__(self, obj=None, nxt = None):
         self.obj = obj
         self.nxt = nxt
-        
-    def __str__(self):
-        return "" + self.obj
 
 class Lsimple():
-    def __init__(self):
+    def __init__(self, size=0):
         self.first_Node = None
-        self.size=0
+        self.size=size
         
     def __void(self):
         return self.fisrt_Node == None
 
     def insert(self, element, index):
-        size=size+1
-        if not self.head:
-            self.head = node(data=data)
+        self.size=self.size+1
+        n = Node(element)
+        if index>self.size:
+            curr=self.first_Node
+            n.nxt=curr
+            self.first_Node = n
+            return
+        if not self.first_Node:
+            self.first_Node = Node(obj=element)
             return
         prev = None
-        curr = self.head
+        curr = self.first_Node
         x=0
-        n = Node(element)
+        
         while curr.nxt and x<index:
             prev = curr
             curr = curr.nxt
+            x=x+1
         n.nxt=curr
         if prev is None:
-            self.head = n
+            self.first_Node = n
         else:
             prev.nxt=n
         
@@ -37,9 +41,9 @@ class Lsimple():
         return self.size
 
     def remove(self, element):
-        curr = self.head
+        curr = self.first_Node
         prev = None
-        while curr and curr.data != element:
+        while curr and curr.obj != element:
             prev = curr
             curr = curr.nxt
         if prev is None:
@@ -48,4 +52,21 @@ class Lsimple():
             prev.nxt = curr.nxt
             curr.nxt = None
    
-    def contains(self):
+    def contains(self,element):
+        curr = self.first_Node
+        cont=0
+        while curr and curr.obj != element:
+            cont=cont+1
+            curr = curr.nxt
+        if curr.obj == element: 
+            return cont
+        else:
+            print("No se encuentra el elemento")
+    def print_list( self ):
+        node = self.first_Node
+        print(node.obj, end = "")
+        node = node.nxt
+        while node != None:
+            print(" => ",node.obj, end ="")
+            node = node.nxt
+        print("")
