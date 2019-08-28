@@ -70,3 +70,5 @@ class Lsimple():
             print(" => ",node.obj, end ="")
             node = node.nxt
         print(" ")
+###*La complejidad del metodo insert al ser de O(n) permitiria que este memtodo se usara para un editor de texto aunque lo ideal seria buscar un método que nos permitiera hacerlo con una complejidad de O(log n) o incluso menor
+###*La complejidad para agregar n caracteres seria Sumatoria desde 0 hasta n de n y la complejidad para garegar a una cadena de n caracteres es de O(n)
