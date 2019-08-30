@@ -51,7 +51,7 @@ def listaRand(n):
         lista[i] = random.randint(0, 1000)
     return lista
 
-listado=[100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475]
+listado=[25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500]
 
 for i in listado:
     lista=listaRand(i)
