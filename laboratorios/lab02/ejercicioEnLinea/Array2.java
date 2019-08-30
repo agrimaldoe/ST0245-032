@@ -11,7 +11,7 @@ public int countEvens(int[] nums) {
 2.
 public boolean lucky13(int[] nums) {
   for(int i = 0; i < nums.length; i++){ //C1*n
-    if(nums[i] == 1 || nums[i] == 3) //2*C2*n 
+    if(nums[i] == 1 || nums[i] == 3) //C2*n 
       return false; //C3
   }
   return true; //C4
