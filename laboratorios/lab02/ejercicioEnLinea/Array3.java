@@ -6,8 +6,8 @@ public boolean linearIn(int[] outer, int[] inner) {
   for(int i = 0; i < inner.length; i++){ //C2*n
     for(int j = 0; j < outer.length; j++){ //C3*n*n
       if(inner[i] == outer[j]){ //C4*n*n
-        count++; //C5
-        break; //C6
+        count++; //C5*n*n
+        break; //C6*n*n
       }
     }
   }
@@ -50,7 +50,7 @@ public int[] fix34(int[] nums) {
       nums[i+1] = 4; //C5
       for(int j = i + 2; j < nums.length; j++){ //C6*n*n
         if(nums[j] == 4){ //C7*n*n
-          nums[j] = aux; //C8
+          nums[j] = aux; //C8*n*n
         }
       }
     }
@@ -67,9 +67,9 @@ public int maxSpan(int[] nums) {
     for(int i = 0; i < nums.length; i++){ //C5*n
       for(int j = nums.length - 1; j >= 0; j--){ //C6*n*n
         if(nums[j] == nums[i]){ //C7*n*n
-          span = j - i + 1; //C8
-           if(span > maxSpan){ //C9
-            maxSpan = span; //C10
+          span = j - i + 1; //C8*n*n
+           if(span > maxSpan){ //C9*n*n
+            maxSpan = span; //C10*n*n
           }
         }
       }
