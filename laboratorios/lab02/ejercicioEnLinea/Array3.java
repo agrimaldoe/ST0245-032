@@ -46,8 +46,8 @@ public int[] fix34(int[] nums) {
   int aux = 0; //C1
   for(int i = 0; i < nums.length; i++){ //C2*n
     if(nums[i] == 3){ //C3*n
-      aux = nums[i+1]; //C4
-      nums[i+1] = 4; //C5
+      aux = nums[i+1]; //C4*n
+      nums[i+1] = 4; //C5*n
       for(int j = i + 2; j < nums.length; j++){ //C6*n*n
         if(nums[j] == 4){ //C7*n*n
           nums[j] = aux; //C8*n*n
