@@ -19,8 +19,8 @@ public int[] seriesUp(int n) {
   int pos = 0; //C2
   for(int i = 1; i <= n; i++){ //C3*l
     for(int j = 1;j <= i; j++){ //C4*l*f (where f <= l), so in the worst case f = l --> // C4*l*l 
-      ans[pos] = j; //C5*l*l
-      pos++; //C6*l*l
+      ans[pos] = j; //C5*l*f --> //C5*l*l
+      pos++; //C6*l*f --> //C6*l*l
     }
   }
   return ans; //C7
