@@ -5,9 +5,9 @@ public boolean linearIn(int[] outer, int[] inner) {
   int count = 0; //C1
   for(int i = 0; i < inner.length; i++){ //C2*q
     for(int j = 0; j < outer.length; j++){ //C3*q*n (where q <= n), so in the worst case  q = n --> //C3*n*n
-      if(inner[i] == outer[j]){ //C4*n*n
-        count++; //C5*n*n
-        break; //C6*n*n
+      if(inner[i] == outer[j]){ //C4*q*n --> C4*n*n
+        count++; //C5*q*n --> //C5*n*n
+        break; //C6*q*n --> //C6*n*n
       }
     }
   }
