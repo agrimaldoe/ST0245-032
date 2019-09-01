@@ -3,7 +3,10 @@ import time
 from matplotlib import pyplot as plt
 import numpy as np
 
-def mergeSort(l): 
+def mergeSort(l):
+    '''
+    Organizes an array in decreasing order dividing in halves the array
+    ''' 
     if len(l) >1: 
         m = len(l)//2 
         left = l[:m] 
@@ -35,7 +38,10 @@ def mergeSort(l):
             j+=1
             k+=1
   
-def insertSort(l): 
+def insertSort(l):
+    '''
+    Organizes Organize an array in decreasing order thorugh comparations
+    '''
     for i in range(1, len(l)): 
   
         actual = l[i] 
@@ -46,13 +52,18 @@ def insertSort(l):
         l[j+1] = actual 
                
 def listaRand(n):
+    '''
+    Generates a random list with n elements
+    '''
     lista = [0]  * n
     for i in range(n):
         lista[i] = random.randint(0, 1000)
     return lista
 
+#Test Sizes
 listado=[8250,8500,8750,9000,9250,9500,9750,10000,10250,10500,10750,11000,11250,11500,11750,12000,12250,12500,12750,13000]
 
+#Test
 for i in listado:
     lista=listaRand(i)
     ms = time.time()*1000.0
