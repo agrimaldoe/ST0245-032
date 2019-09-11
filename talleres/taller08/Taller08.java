@@ -5,6 +5,25 @@ import java.util.*;
  * @author (Alejandro Salazar y Andrés Grimaldos) 
  * @version (a version number or a date)
  */
+public class Solicitud
+{
+    String tienda;
+    int cantidad;
+    public Solicitud(String tienda, int cantidad){
+        this.tienda=tienda;
+        this.cantidad=cantidad;
+    }
+}
+public class Neveras
+{
+    int code;
+    String desc;
+    public Neveras(int code, String desc){
+        this.code = code;
+        this.desc = desc;
+        
+    }
+}
 public class Taller08
 {
     public static int polaca(String str){
