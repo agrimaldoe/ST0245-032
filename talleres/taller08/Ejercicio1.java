@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * Write a description of class Taller8 here.
  * 
- * @author (your name) 
+ * @author (Alejandro Salazar y Andrés Grimaldos) 
  * @version (a version number or a date)
  */
 public class Ejercicio1
