@@ -5,7 +5,7 @@ import java.util.*;
  * @author (Alejandro Salazar y Andrés Grimaldos) 
  * @version (a version number or a date)
  */
-public class Ejercicio1
+public class Taller08
 {
     public static int polaca(String str){
         String [] numb = str.split(" ");
@@ -56,5 +56,21 @@ public class Ejercicio1
         if(a==a1 && c==c1 && b==b1 && d==d1)
             return true;
         return false;
+    }
+
+    public static void neveras(Stack<Neveras> nev, Queue<Solicitud> sol){
+        while(!sol.isEmpty()){
+            Solicitud act = sol.remove();
+            System.out.print(act.tienda+" ");
+            for(int i=0;i<act.cantidad;i++){
+                try{
+                    Neveras act2=nev.pop();
+                    System.out.print("( "+act2.code+","+act2.desc+" )" );
+                }catch(Exception e){
+                    break;
+                }
+            }
+            System.out.println();
+        }
     }
 }
