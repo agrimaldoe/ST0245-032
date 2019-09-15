@@ -27,7 +27,7 @@ public class Ejecicio2_1
                     aux=i+1;
                     code=0;
                 }else if(a.charAt(i)==']'){ //C8*n
-                    sub = a.substring(aux,i); //C9*n 
+                    sub = a.substring(aux,i); //C9*n*n 
                     switch(code){
                         case -1:
                             lista.addFirst(sub); //C10*n
