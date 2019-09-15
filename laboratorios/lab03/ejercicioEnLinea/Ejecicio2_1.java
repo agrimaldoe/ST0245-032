@@ -10,49 +10,49 @@ public class Ejecicio2_1
             String sub="";
             String a=sc.nextLine();
             LinkedList<String> lista= new LinkedList<String>();
-            for(int i=0; i<a.length();i++){
-                if(a.charAt(i)=='['){
-                    sub = a.substring(aux,i);
+            for(int i=0; i<a.length();i++){ //O(n)
+                if(a.charAt(i)=='['){ //O(1)
+                    sub = a.substring(aux,i); // O(n)
                     switch(code){
                         case -1:
-                            lista.addFirst(sub);
+                            lista.addFirst(sub); //O(1)
                         break;
                         case 0:
-                            lista.addFirst(sub);     
+                            lista.addFirst(sub); //O(1)    
                         break;
                         case 1:
-                            lista.addLast(sub);      
+                            lista.addLast(sub);  //O(1) because LinkedList in java has a tail    
                         break;
                     }
                     aux=i+1;
                     code=0;
-                }else if(a.charAt(i)==']'){
-                    sub = a.substring(aux,i);
+                }else if(a.charAt(i)==']'){ //O(1)
+                    sub = a.substring(aux,i); //O(n) 
                     switch(code){
                         case -1:
-                            lista.addFirst(sub);
+                            lista.addFirst(sub); //O(1)
                         break;
                         case 0:
-                            lista.addFirst(sub);     
+                            lista.addFirst(sub);  //O(1)   
                         break;
                         case 1:
-                            lista.addLast(sub);      
+                            lista.addLast(sub);   //O(1)   
                         break;
                     }
                     aux=i+1;
                     code=1;
                 }
             }
-            sub = a.substring(aux);
+            sub = a.substring(aux); //O(n)
             switch(code){
                 case -1:
-                    lista.addFirst(sub);
+                    lista.addFirst(sub); //O(1)
                 break;
                 case 0:
-                    lista.addFirst(sub);     
+                    lista.addFirst(sub);  //O(1) 
                 break;
                 case 1:
-                    lista.addLast(sub);      
+                    lista.addLast(sub);  //O(1)    
                 break;
             }
             printlista(lista);
