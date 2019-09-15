@@ -1,6 +1,5 @@
 import java.util.*;
 import java.io.*;
-
 /**
  * Class which simulate a data structure for the csv archives NOTAS ST0242,
  * NOTAS ST0245 and NOTAS ST0247, where you can do two queries.
