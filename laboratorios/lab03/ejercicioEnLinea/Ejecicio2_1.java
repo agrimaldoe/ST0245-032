@@ -11,8 +11,8 @@ public class Ejecicio2_1
             String a=sc.nextLine();
             LinkedList<String> lista= new LinkedList<String>();
             for(int i=0; i<a.length();i++){ //O(n)
-                if(a.charAt(i)=='['){ //O(1)
-                    sub = a.substring(aux,i); // O(n)
+                if(a.charAt(i)=='['){ //O(n)
+                    sub = a.substring(aux,i); // O(n*n) 
                     switch(code){
                         case -1:
                             lista.addFirst(sub); //O(1)
