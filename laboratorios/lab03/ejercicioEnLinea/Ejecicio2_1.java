@@ -26,7 +26,7 @@ public class Ejecicio2_1
                     }
                     aux=i+1;
                     code=0;
-                }else if(a.charAt(i)==']'){ //O(1)
+                }else if(a.charAt(i)==']'){ //O(n)
                     sub = a.substring(aux,i); //O(n) 
                     switch(code){
                         case -1:
