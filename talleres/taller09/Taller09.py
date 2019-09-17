@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[17]:
-
-
 class Taller09:
     def add(tabla,s,p):
         tabla[s]=p
