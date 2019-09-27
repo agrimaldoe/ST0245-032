@@ -12,10 +12,10 @@ class BinaryTree:
       self.root = None
     
   def insertar(self, data):
-    if self.root is None: 
-      self.root = Nodo(data)
+    if self.root is None:          #O(1)
+      self.root = Nodo(data)       #O(1)
     else:
-      self.__insertar_aux(data, self.root)
+      self.__insertar_aux(data, self.root)  #O(log2 n)
 
   def __insertar_aux(self, data, actual):
       if(actual.right is None or actual.left is None):
@@ -34,7 +34,7 @@ class BinaryTree:
 
     # ------------------------------------------------------    
   def buscar(self, data):
-      return self.__buscar_aux(data, self.root)
+      return self.__buscar_aux(data, self.root) #O(log2 n)
 
   def __buscar_aux(self, data, actual):
       if(actual is None):
