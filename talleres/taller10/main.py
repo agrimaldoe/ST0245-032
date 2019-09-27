@@ -15,7 +15,9 @@ class BinaryTree:
     if self.root is None:          #O(1)
       self.root = Nodo(data)       #O(1)
     else:
-      self.__insertar_aux(data, self.root)  #O(log2 n)
+      self.__insertar_aux(data, self.root)  #O(log2 n)+
+                                            -----------
+                                            #O(log2 n)
 
   def __insertar_aux(self, data, actual):
       if(actual.right is None or actual.left is None):
