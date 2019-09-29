@@ -1,6 +1,6 @@
 import pandas as pd
 
-dta = pd.read_csv("data_set.csv")
+data = pd.read_csv("data_set.csv")
 
 def class_counts(rows):
     cuenta = {}
