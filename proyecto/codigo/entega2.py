@@ -21,7 +21,7 @@ class table:
         del(self.tb[self.ct-1])
         self.ct=self.ct-1
     def buscar(self,value):
-        return 
+        return self.tb[value]
 datos = pd.read_csv("data_set.csv")
 datos.head()
 dtFrame=table()
