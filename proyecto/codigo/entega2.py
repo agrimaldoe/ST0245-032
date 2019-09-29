@@ -18,7 +18,7 @@ class table:
     def delete(self,v):
         for i in range(v,self.ct):
             self.tb[i]=self.tb.pop(i+1)
-        del(self.tb[selt.ct-1])
+        del(self.tb[self.ct-1])
         self.ct=self.ct-1
     def buscar(self,value):
         return 
