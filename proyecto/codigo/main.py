@@ -28,3 +28,4 @@ trainingData = [
   ["Yellow", 3, "Lemon"],
 ]
 print(imp_gini(trainingData))
+print(class_counts(trainingData))
