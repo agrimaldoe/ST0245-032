@@ -21,7 +21,7 @@ class Direct():
         self.size=size
         
     def __void(self):
-        return self.fisrt_Node == None
+        return self.first_Node == None
     
     def insert(self, name, size, athor , ubicacion):
         a=buscar(ubicacion)
