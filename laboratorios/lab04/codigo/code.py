@@ -42,16 +42,17 @@ class Direct():
                 
         print("File not found")
         
-        def cosult(self, dirr, author, size):###Si se desea buscar con cualquier autor debe enviarse como parametro "any"
-            actual=self.buscar(dirr)         ###Y para cualquier tamaño se envia 0 como parametro
-            curr=actual.son
-            a= author=="any"
-            while not curr.nxt == None:
-                if a :
-                    if curr.size:
-                        print(curr.name)
-                else:
-                    if curr.author==author:
-                        print(curr.name)
+    def cosult(self, dirr, author, size):###Si se desea buscar con cualquier autor debe enviarse como parametro "any"
+        actual=self.buscar(dirr)         ###Y para cualquier tamaño se envia 0 como parametro
+        curr=actual.son
+        a= author=="any"
+        while not curr.nxt == None:
+            if a :
+                if curr.size:
+                    print(curr.name)
+            else:
+                if curr.author==author:
+                    print(curr.name)
+                    
     def size(self):
         return self.size
