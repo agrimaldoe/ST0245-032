@@ -9,26 +9,26 @@ class Node():
     def insert(self, name, size, author):
         if not self.son == None:
             curr = self.son
-            while not curr.nxt==None
+            while not curr.nxt==None:
                 curr=curr.nxt
-            curr.next=Node(name,size,author)
+            curr.nxt=Node(name,size,author)
         else:
             self.son=Node(name,size,author)
         
 class Direct():
-    def __init__(self, size=0):
-        self.Root_Node = None
-        self.size=size
+    def __init__(self, name=None):
+        self.root_Node = Node(name)
+        
         
     def __void(self):
         return self.first_Node == None
     
-    def insert(self, name, size, athor , ubicacion):
-        a=buscar(ubicacion)
+    def insert(self, name, size, author , ubicacion):###El tamaño se recibe en Kb
+        a=self.buscar(ubicacion)
         a.insert(name,size,author)
         
     def buscar(self,name):
-        self.buscar_aux(name,self.root)
+        return self.buscar_aux(name,self.root_Node)
         
     def buscar_aux(self, name, curr):
         while not curr==None:
@@ -53,6 +53,14 @@ class Direct():
             else:
                 if curr.author==author:
                     print(curr.name)
-                    
-    def size(self):
-        return self.size
+    def imprimir(self):
+        curr=self.root_Node
+        print(curr.name)
+        curr=curr.son
+        while not curr==None:
+            print("├──","[",curr.author,"",curr.size,"]",curr.name)
+            aux=curr.son
+            while not aux==None:
+                print("│   └──","[",aux.author,"",aux.size,"]",aux.name)
+                aux=aux.nxt
+            curr=curr.nxt
