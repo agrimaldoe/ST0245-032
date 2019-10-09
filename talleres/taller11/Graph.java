@@ -1,12 +1,5 @@
 import java.util.ArrayList;
 
-/**
- * Clase abstracta para la implementacion de grafos dirigidos
- * recordar los usos de clase abstracta 
- * @see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"> Abstract </a>
- *
- * @author Mauricio Toro, Camilo Paez
- */
 public abstract class Graph {
 	protected int size;
 
