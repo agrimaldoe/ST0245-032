@@ -15,7 +15,6 @@ class GraphAl:
       visited[i] = "Blue"
       while( len(q) != 0):
         b = q.pop()
-        print(b)
         for a in self.lista[b]:
           if(visited[a] == "" and visited[b] == "Blue"):
             q.append(a)
