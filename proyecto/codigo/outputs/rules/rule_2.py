@@ -1,0 +1,27 @@
+def findDecision(obj): #obj[0]: ph, obj[1]: soil_temperature, obj[2]: soil_moisture, obj[3]: illuminance, obj[4]: env_temperature, obj[5]: env_humidity
+   if obj[2]<=67.03:
+      if obj[1]>19.5:
+         if obj[5]>36.0:
+            if obj[4]>19.0:
+               if obj[0]<=7.04:
+                  if obj[3]<=5740.0:
+                     return 'no'
+                  elif obj[3]>5740.0:
+                     return 'no'
+               elif obj[0]>7.04:
+                  if obj[3]<=5740.0:
+                     return 'yes'
+                  elif obj[3]>5740.0:
+                     return 'no'
+            elif obj[4]<=19.0:
+               if obj[0]>7.04:
+                  if obj[3]<=5740.0:
+                     return 'no'
+               elif obj[0]<=7.04:
+                  return 'no'
+         elif obj[5]<=36.0:
+            return 'no'
+      elif obj[1]<=19.5:
+         return 'no'
+   elif obj[2]>67.03:
+      return 'no'
