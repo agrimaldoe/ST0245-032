@@ -3,7 +3,7 @@ import pandas as pd
 import pandas as pd
 import Chefboost as chef
 class node:
-    def __init__(self, p,sT,sM, luz, eT, eH, lbl):
+    def __init__(self, p,sT,sM, luz, eT, eH, lbl=None):
         self.ph=p
         self.soilT=sT
         self.soilM=sM
@@ -17,6 +17,8 @@ class table:
         self.ct=0
         self.model=None
     def insert(self,dato):
+        if dato.lbl == None:
+            dato.lbl=chef.predict(self.model,[dato.ph,dato.soilT,dato.soilM,dato.light,dato.envT,dato.envH])
         self.tb[self.ct]=dato
         self.ct=self.ct+1
     def delete(self,v):
